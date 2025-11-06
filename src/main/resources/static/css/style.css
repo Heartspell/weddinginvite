@@ -1,0 +1,455 @@
+/* 🌸 ОБЩИЕ СТИЛИ */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', cursive;
+    color: #f4eee4;
+    scroll-behavior: smooth;
+    background-color: #F4EEE4FF;
+}
+
+/* 🌅 Hero блок */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Картинка */
+.bg-picture, .bg-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-picture {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bg-image {
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+/* Текст и кнопки поверх */
+.overlay {
+    position: absolute;
+    inset: 0;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F4EEE4FF;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.overlay * { pointer-events: auto; }
+
+/* Градиент снизу */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, #f4eee4);
+    z-index: 0;
+}
+
+/* Названия */
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.5s ease;
+    transition: font-family 0.2s ease;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: 'Noto Serif', serif;
+    animation: fadeInDown 1.5s ease;
+    transition: font-family 0.2s ease;
+}
+
+/* 🌸 Второй блок */
+.invite {
+    background-color: #F4EEE4FF;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.invite-text {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 🗓 Календарь */
+.calendar-section {
+    background-color: #F4EEE4FF;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+    font-family: 'Marck Script', cursive;
+}
+
+.calendar .month {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Сетка */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day-name, .day, .empty {
+    font-family: 'Noto Serif', serif;
+    color: #333;
+}
+
+.day-name {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.day, .empty {
+    font-size: 1rem;
+    padding: 8px 0;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+/* ❤️ Выделенная дата */
+.heart-day {
+    position: relative;
+    color: #e57373;
+    font-weight: bold;
+    border: 2px solid #e57373;
+    padding: 6px 0;
+    border-radius: 50%;
+}
+
+.heart-day::after {
+    content: '❤';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    color: #e57373;
+    transition: 0.3s ease;
+}
+
+.heart-day:hover {
+    background-color: #e57373;
+    color: white;
+    transform: scale(1.2);
+}
+
+.heart-day:hover::after {
+    color: pink;
+    transform: translateX(-50%) scale(1.3);
+}
+/* 📱 Мобильная адаптация календаря */
+@media (max-width: 480px) {
+    .calendar {
+        max-width: 300px;   /* было 360 — делаем компактнее */
+        width: 85%;
+        padding: 20px 25px; /* уменьшаем внутренние отступы */
+    }
+
+    .calendar .month {
+        font-size: 2rem; /* чуть меньше текст месяца, чтобы гармонично */
+    }
+
+    .day, .empty {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* === Карта === */
+.map-section {
+    background-color: #F4EEE4FF;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.map-section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #222;
+}
+
+.map-section p {
+    font-family: 'Noto Serif', serif;
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.map-section a {
+    display: inline-block;
+    margin: 8px 0 18px;
+    text-decoration: none;
+    background-color: #59a820;
+    color: #F4EEE4FF;
+    padding: 8px 20px;
+    border-radius: 22px;
+    font-family: 'Noto Serif', serif;
+    transition: background-color .25s ease;
+}
+
+.map-section a:hover { background-color: #118721; }
+
+.map-widget-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 56vh;
+    min-height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    position: relative;
+    background: #fff;
+}
+
+.dg-widget { width: 100% !important; height: 100% !important; }
+.dg-widget-link { display: none; }
+
+/* === Таймлайн === */
+.timeline {
+    background-color: #F4EEE4FF;
+    padding: 25px 20px;
+    max-width: 640px;
+    margin: 0 auto 20px;
+    color: #333;
+    font-family: 'Noto Serif', serif;
+}
+/* 🩵 Удаляем пунктирную линию в программе торжества */
+.timeline-item::before {
+    content: none !important;
+    border: none !important;
+    display: none !important;
+}
+
+
+.timeline-title {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
+    color: #222;
+    margin-bottom: 50px;
+}
+@media (max-width: 480px) {
+    .timeline-title {
+        font-size: 2rem;
+    }
+}
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.timeline-item:last-child::before { height: 36px; }
+
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    color: #392828;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.timeline-content .sub {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* === Музыка === */
+.music-control {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: fadeIn 2s ease;
+    z-index: 5;
+    position: relative;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+}
+
+.music-controls {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+    z-index: 5;
+}
+
+.music-controls button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.music-controls button:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* === WhatsApp плавающая кнопка === */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.whatsapp-btn img {
+    width: clamp(55px, 10vw, 80px);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* === Анимации === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Адаптив === */
+@media (max-width: 900px) {
+    .map-widget-wrapper { height: 52vh; }
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 2.5rem; }
+    .invite-text { font-size: 1rem; }
+    .timeline { padding: 20px 16px; }
+    .calendar-section { padding: 24px 0; }
+    .map-section { padding: 24px 16px; }
+}
+
+@media (max-width: 600px) {
+    .hero { height: 66svh; min-height: 550px; }
+    .timeline-icon { width: 60px; height: 60px; }
+    .timeline-content h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .map-widget-wrapper { height: 48vh; min-height: 260px; }
+}
+
+@media (max-width: 420px) {
+    .whatsapp-btn img { width: 55px; }
+}
+
+/* 🔥 Базовая анимация появления */
+.fade-in,
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transition: opacity 400ms ease, transform 600ms ease;
+}
+
+/* начальные трансформации (до появления) */
+.fade-in { transform: translateY(20px); }
+.fade-left { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+
+/* появление — включаем анимацию через transform + opacity */
+.appear.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.appear.fade-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.appear.fade-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* при желании — можно добавить задержки для "ступенчатого" появления */
+.appear.delay-100 { transition-delay: 0.1s; }
+.appear.delay-200 { transition-delay: 0.2s; }
+.appear.delay-300 { transition-delay: 0.3s; }

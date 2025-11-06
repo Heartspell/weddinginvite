@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WeddingInviteApplication {
+public class WeddingApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(WeddingInviteApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(WeddingApplication.class, args);
+    }
 
 }

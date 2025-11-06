@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение — Адилет & Гулзат</title>
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Great+Vibes&family=Bad+Script&family=Alex+Brush&family=Caveat:wght@700&family=Tangerine:wght@700&family=Pacifico&family=Comforter&family=Poiret+One&family=Amatic+SC:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<!-- 📞 Кнопка WhatsApp -->
+<a href="https://wa.me/996700042326" class="whatsapp-btn" target="_blank">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+</a>
+
+<body>
+
+<!-- 💍 Первый экран -->
+<section class="hero fade-in">
+
+    <picture class="bg-picture">
+        <source media="(min-width: 769px)" srcset="img/bg1.jpg">
+        <img src="img/bg.jpg" alt="wedding" class="bg-image">
+    </picture>
+
+    <div class="overlay">
+        <h1 class="title">Адилет & Гулзат</h1>
+        <p class="date">27.11.2025</p>
+        <div class="music-control" id="playBtn">▶</div>
+    </div>
+
+    <!-- 🎧 Кнопки управления музыкой -->
+    <div class="music-controls">
+        <button id="prev">⏮</button>
+        <button id="playPause">▶</button>
+        <button id="next">⏭</button>
+    </div>
+
+    <!-- 🎶 Музыка -->
+    <audio id="music" src="music/music.mp4"></audio>
+</section>
+
+<!-- 💌 Второй блок — текст приглашения -->
+<section class="invite fade-right">
+    <p class="invite-text">
+        <b>Кымбаттуу коноктор!</b><br>
+        Биз өмүрүбүздөгү эң бактылуу күн - үйлөнүү тоюбузга сиздерди чын ыкластуу чакырабыз! <br><br>
+        Бул күн биздин жаңы үй-бүлөлүк бакубат жашообуздун сулуу башталышы болсун деп тилейбиз.<br><br>
+        Сиздер менен бирге бул өзгөчө күндү бөлүшүү - биз үчүн чоң кубаныч!<br><br>
+        <b>27 ноябрь 2025 ж.</b><br>
+        Сокулук а. <br>Банкетный зал <b>«Ала Арча»</b>
+    </p>
+</section>
+
+<!-- 🎉 Программа торжества -->
+<section class="timeline fade-left">
+    <h2 class="timeline-title">Майрамдын программасы:</h2>
+
+    <div class="timeline-item">
+        <img src="img/location.png" alt="иконка" class="timeline-icon">
+        <div class="timeline-content">
+            <h3>16:00</h3>
+            <p><b>Конокторду чогултуу</b></p>
+            <p class="sub">Жылмайып, жакшы маанай менен келүүңүздөрдү өтүнөбүз</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <img src="img/rings.png" alt="иконка" class="timeline-icon">
+        <div class="timeline-content">
+            <h3>17:00</h3>
+            <p><b>Майрамдын башталышы</b></p>
+            <p class="sub">Кол чабууларыңыздар биз үчүн эң чоң кубаныч</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <img src="img/drink.png" alt="иконка" class="timeline-icon">
+        <div class="timeline-content">
+            <h3>18:00</h3>
+            <p><b>Банкет</b></p>
+            <p class="sub">Даамдуу тамак, бий жана көңүл ачуу башталат</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <img src="img/dance.png" alt="иконка" class="timeline-icon">
+        <div class="timeline-content">
+            <h3>22:00</h3>
+            <p><b>Майрамдын жыйынтыгы</b></p>
+            <p class="sub">Бул кеч сизге жагат деп ишенебиз</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 🗓️ Календарь -->
+<section class="calendar-section fade-right">
+    <div class="calendar">
+        <div class="month">Ноябрь</div>
+        <div class="days">
+            <div class="day-name">Пн</div>
+            <div class="day-name">Вт</div>
+            <div class="day-name">Ср</div>
+            <div class="day-name">Чт</div>
+            <div class="day-name">Пт</div>
+            <div class="day-name">Сб</div>
+            <div class="day-name">Вс</div>
+
+            <!-- Недели -->
+            <div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="day">1</div><div class="day">2</div>
+            <div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div>
+            <div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+            <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div>
+            <div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="heart-day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div>
+        </div>
+    </div>
+</section>
+
+<!-- 🗺️ Карта ресторана (вставить вместо старой секции) -->
+<section class="map-section fade-left">
+    <h2>Банкетный зал «Ала Арча»</h2><br>
+    <p style="align-self: center">Сокулук, Фрунзе к. 70</p>
+    <a href="https://2gis.kg/bishkek/firm/70000001063945610" target="_blank">Открыть в 2ГИС</a>
+
+    <div class="map-widget-wrapper">
+
+    <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+    <script charset="utf-8">
+        // Инициализация виджета — width/height = '100%' чтобы он был адаптивным внутри контейнера
+        new DGWidgetLoader({
+            width: "100%",
+            height: "100%",
+            borderColor: "rgba(251,172,80,0.57)",
+            pos: { lat: 42.853363439873384, lon: 74.3094849586487, zoom: 16 },
+            opt: { city: "bishkek" },
+            org: [{ id: "70000001063945610" }]
+        });
+    </script>
+    </div>
+</section>
+<br>
+
+</body>
+</html>
