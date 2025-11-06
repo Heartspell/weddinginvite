@@ -10,12 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!music) return;
         if (music.paused) {
             music.play().catch(()=>{}); // подавляем возможную ошибку autoplay
-            if (playBtn) playBtn.textContent = '⏸';
-            if (playPause) playPause.textContent = '⏸';
+                // switch icons to pause
+                document.querySelectorAll('#playBtn i, #playPause i').forEach(el => {
+                    el.classList.remove('fa-play');
+                    el.classList.add('fa-pause');
+                });
+                if (playBtn) playBtn.setAttribute('aria-label', 'Pause');
+                if (playPause) playPause.setAttribute('aria-label', 'Pause');
         } else {
             music.pause();
-            if (playBtn) playBtn.textContent = '▶';
-            if (playPause) playPause.textContent = '▶';
+                // switch icons to play
+                document.querySelectorAll('#playBtn i, #playPause i').forEach(el => {
+                    el.classList.remove('fa-pause');
+                    el.classList.add('fa-play');
+                });
+                if (playBtn) playBtn.setAttribute('aria-label', 'Play');
+                if (playPause) playPause.setAttribute('aria-label', 'Play');
         }
     }
 

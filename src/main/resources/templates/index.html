@@ -8,6 +8,8 @@
     <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Great+Vibes&family=Bad+Script&family=Alex+Brush&family=Caveat:wght@700&family=Tangerine:wght@700&family=Pacifico&family=Comforter&family=Poiret+One&family=Amatic+SC:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
 
+    <!-- Icons: use Font Awesome webfont to avoid emoji substitution on mobile -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -30,14 +32,16 @@
     <div class="overlay">
         <h1 class="title">Адилет & Гулзат</h1>
         <p class="date">27.11.2025</p>
-        <div class="music-control" id="playBtn">▶</div>
+        <div class="music-control" id="playBtn" role="button" aria-label="Play" tabindex="0">
+            <i class="fa-solid fa-play"></i>
+        </div>
     </div>
 
     <!-- 🎧 Кнопки управления музыкой -->
     <div class="music-controls">
-        <button id="prev">⏮</button>
-        <button id="playPause">▶</button>
-        <button id="next">⏭</button>
+        <button id="prev" aria-label="Previous"><i class="fa-solid fa-backward"></i></button>
+        <button id="playPause" aria-label="Play/Pause"><i class="fa-solid fa-play" id="playIcon"></i></button>
+        <button id="next" aria-label="Next"><i class="fa-solid fa-forward"></i></button>
     </div>
 
     <!-- 🎶 Музыка -->
